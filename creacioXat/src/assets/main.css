@@ -1,0 +1,82 @@
+/* Estils per al container del xat */
+.xat-container {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  max-width: 600px; /* Amplada màxima del xat */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estils per al títol del xat */
+.xat-container h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem; /* Mida de font del títol */
+  color: #333;
+}
+
+/* Estils per a la llista de missatges */
+.missatges {
+  list-style-type: none; /* Eliminar punts de la llista */
+  padding: 0;
+  margin: 0;
+  max-height: 300px; /* Altura màxima de la llista de missatges */
+  overflow-y: auto; /* Permetre el desplaçament vertical */
+}
+
+/* Estils per als missatges individuals */
+.missatges li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: #e7f0ff; /* Color de fons dels missatges */
+  border: 1px solid #007bff; /* Color del borde dels missatges */
+  transition: background-color 0.2s; /* Transició per a l'efecte hover */
+}
+
+/* Efecte hover sobre els missatges */
+.missatges li:hover {
+  background-color: #d0e5ff; /* Color de fons al passar el ratolí */
+}
+
+/* Estils per al formulari de missatge */
+.missatge-form {
+  display: flex;
+  margin-top: 1rem;
+}
+
+/* Estils per al camp de text */
+.missatge-form input {
+  flex-grow: 1; /* Permet que el camp ocupi tot l'espai disponible */
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc; /* Borde del camp de text */
+  border-radius: 5px; /* Arrodoniment del borde */
+  font-size: 1rem; /* Mida de font del camp */
+}
+
+/* Estils per al botó d'enviar */
+.missatge-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  border-radius: 30px;
+  border: 1px solid #8F9092;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+}
+
+/* Efecte hover sobre el botó */
+.missatge-form button:hover {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+}
