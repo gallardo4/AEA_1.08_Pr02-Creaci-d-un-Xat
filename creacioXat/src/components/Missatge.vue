@@ -1,6 +1,11 @@
 <script setup>
 import { ref, defineEmits } from 'vue';
 
+// Definir els props
+const props = defineProps({
+  author: String
+});
+
 // Definir l'emissor d'events
 const emit = defineEmits();
 
@@ -11,7 +16,7 @@ const missatge = ref('');
 const enviarMissatge = () => {
   if (missatge.value.trim()) {
     // Emitir l'event al component pare
-    emit('enviarMissatge', missatge.value);
+    emit('enviarMissatge', {author: props.author, text: missatge.value});
     missatge.value = ''; // Netejar el camp de text després d'enviar
   }
 };

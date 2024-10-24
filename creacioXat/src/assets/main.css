@@ -1,43 +1,65 @@
 /* Estils per al container del xat */
 .xat-container {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  margin: 1rem auto;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  border: none; /* Eliminat el borde per a un aspecte més net */
+  padding: 1.5rem; /* Espai intern addicional per a un millor confort */
+  margin: 1rem auto; /* Margen automàtic per centrar el contenidor */
+  border-radius: 15px; /* Arrodoniment del borde per un estil suau */
+  background-color: #ffffff; /* Fons blanc per contrastar amb el contingut */
   max-width: 600px; /* Amplada màxima del xat */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombra més pronunciada */
+  transition: box-shadow 0.3s ease; /* Transició suau per a l'ombra */
 }
 
-/* Estils per al títol del xat */
-.xat-container h2 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem; /* Mida de font del títol */
-  color: #333;
+/* Efecte hover sobre el contenidor de xat */
+.xat-container:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombra més intensa al passar el ratolí */
 }
 
-/* Estils per a la llista de missatges */
 .missatges {
-  list-style-type: none; /* Eliminar punts de la llista */
+  list-style-type: none;
   padding: 0;
   margin: 0;
-  max-height: 300px; /* Altura màxima de la llista de missatges */
-  overflow-y: auto; /* Permetre el desplaçament vertical */
+  font-family: 'Roboto', sans-serif;
+  max-height: 600px;
+  overflow-y: auto;
+  background-color: #f0f4f8;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px;
 }
 
-/* Estils per als missatges individuals */
 .missatges li {
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  border-radius: 5px;
-  background-color: #e7f0ff; /* Color de fons dels missatges */
-  border: 1px solid #007bff; /* Color del borde dels missatges */
-  transition: background-color 0.2s; /* Transició per a l'efecte hover */
+  padding: 15px;
+  margin-bottom: 12px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecte hover sobre els missatges */
 .missatges li:hover {
-  background-color: #d0e5ff; /* Color de fons al passar el ratolí */
+  background-color: #f1f8ff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border-color: #007bff;
+}
+
+.missatges li span {
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.missatges li span:hover {
+  color: #007bff;
+  cursor: pointer;
 }
 
 /* Estils per al formulari de missatge */
@@ -50,13 +72,29 @@
 .missatge-form input {
   flex-grow: 1; /* Permet que el camp ocupi tot l'espai disponible */
   margin-right: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid #ccc; /* Borde del camp de text */
-  border-radius: 5px; /* Arrodoniment del borde */
+  border: 2px solid #ccc; /* Vora del camp de text */
+  border-radius: 10px; /* Arrodoniment del borde */
   font-size: 1rem; /* Mida de font del camp */
+  height: 50px;
+  background-color: #ffffff; /* Fons blanc per un contrast nítid */
+  padding: 0 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombra suau */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transicions suaus */
 }
 
-/* Estils per al botó d'enviar */
+/* Efecte hover sobre el camp de text */
+.missatge-form input:hover {
+  border-color: #007bff; /* Color de vora blau al passar el ratolí */
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Ombra més intensa al hover */
+}
+
+/* Efecte focus sobre el camp de text */
+.missatge-form input:focus {
+  outline: none; /* Eliminar l'estil de focus per defecte */
+  border-color: #007bff; /* Color de vora blau al centrar-se */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4); /* Ombra intensa al focus */
+}
+
 .missatge-form button {
   display: flex;
   align-items: center;
@@ -65,18 +103,39 @@
   cursor: pointer;
   width: 150px;
   height: 50px;
-  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   border-radius: 30px;
-  border: 1px solid #8F9092;
-  transition: all 0.2s ease;
+  border: none;
+  transition: all 0.3s ease;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
-  color: #606060;
-  text-shadow: 0 1px #fff;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Efecte hover sobre el botó */
 .missatge-form button:hover {
-  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+h2 {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+h2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
